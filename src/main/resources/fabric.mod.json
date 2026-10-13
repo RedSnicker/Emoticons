@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "emoticons",
+  "version": "${version}",
+  "name": "Emoticons",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/emoticons/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.csl.emoticons.client.EmoticonsClient"
+    ],
+    "main": [
+      "com.csl.emoticons.Emoticons"
+    ]
+  },
+  "mixins": [
+    "emoticons.mixins.json",
+    {
+      "config": "emoticons.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
